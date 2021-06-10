@@ -74,3 +74,18 @@ The Records folder of your Static Entity contains all statuses you have created.
 The Identifier for the checked out status is `CheckedOut` and the Label is `"Checked-Out"`. The field TextDescription is the custom field and has the string value `"The guests have just left."`.
 
 You can access the record for checked out status by referencing its Identifier, like this: `Entities.Status.CheckedOut`.
+
+
+## Import/Bootstrap Static Entity with Excel Data
+
+1. Create Excel file with 1 Column of Data, and header "Label" in 1st Row
+2. Create Entity in Service Studio with Id and "Label" Field
+3. Right-click Entity --> Advanced --> "Update Action to Bootstrap Data from Excel..."
+4. Select the Excel file
+5. Publish (F5)
+6. Right-click Entity --> Advanced --> "Convert to Static Entity"
+7. Right-click Static Entity --> "Edit Entity"
+8. Records Tab --> Import from Database
+9. Delete Bootstrap Action in Logic --> Server Actions
+
+
